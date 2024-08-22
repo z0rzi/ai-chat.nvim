@@ -15,7 +15,7 @@ local function get_copilot_script_path()
   local dir_path = M.get_plugin_path()
   -- if there is no executable or bun_executable in the config, we will use the shipped bun executable
   local bun_path = string.format("%s ", vim.fn.exepath("bun") or config.default.bun_executable or "")
-  return string.format("%s%scopilot/index.ts ", bun_path, dir_path)
+  return string.format("%s%smonica/index.ts ", bun_path, dir_path)
 end
 
 -- Runs the copilot script with the given arguments.
